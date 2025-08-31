@@ -7,3 +7,4 @@ public/
 node_modules
 .frontmatter/
 content/
+frontmatter.json
