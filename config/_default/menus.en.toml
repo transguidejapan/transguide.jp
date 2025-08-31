@@ -1,0 +1,29 @@
+[[main]]
+none = "none"
+
+[[main]]
+name = "Resources"
+pageRef = "docs"
+identifier = "Ekyu6mYQVW"
+weight = 9_999
+
+[[main]]
+name = "Guides"
+pageRef = "blog"
+identifier = "vr7jM59h3G"
+weight = 9_999
+
+[[main]]
+pre = "envelope"
+url = "mailto:transguidejapan@gmail.com"
+identifier = "GNviCpw4Sp"
+weight = 9_999
+
+[[footer]]
+none = "none"
+
+[[footer]]
+name = "Github"
+url = "https://github.com/transguidejapan/transguide.jp"
+identifier = "ZQ3TZfjz31"
+weight = 9_999

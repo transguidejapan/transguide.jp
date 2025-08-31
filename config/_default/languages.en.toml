@@ -1,0 +1,14 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "transguide.jp"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "logo.svg"
+secondaryLogo = "logo.svg"
+description = "A database, guide, and overall resource for transgender, genderqueer, and non-binary people living in Japan."
