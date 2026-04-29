@@ -1,0 +1,3 @@
+{{ $href := .Get "link" | default (.Get "href") }}
+{{ $title := .Get "title" | default $href }}
+<li><a href="{{ $href | relURL }}">{{ $title }}</a></li>

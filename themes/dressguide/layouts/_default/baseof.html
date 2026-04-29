@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+  {{ partial "dress/head.html" . }}
+  <body dir="{{ .Site.Language.LanguageDirection | default `ltr` }}">
+    <a href="#main">Skip to main content</a>
+    {{ partial "dress/header.html" . }}
+    <main id="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "dress/footer.html" . }}
+  </body>
+</html>

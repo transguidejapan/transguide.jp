@@ -1,0 +1,29 @@
+{{ $skip := dict "author" true "cascade" true "date" true "description" true "draft" true "iscjklanguage" true "lastmod" true "linktitle" true "summary" true "tags" true "title" true "type" true }}
+{{ $items := slice }}
+{{ range $key, $value := .Params }}
+  {{ if not (index $skip (lower $key)) }}
+    {{ $items = $items | append (dict "term" ($key | humanize | title) "value" $value) }}
+  {{ end }}
+{{ end }}
+{{ with $items }}
+  <aside>
+    <h2>Details</h2>
+    <dl>
+      {{ range . }}
+        <dt>{{ .term }}</dt>
+        <dd>
+          {{ $value := printf "%v" .value }}
+          {{ if reflect.IsSlice .value }}
+            {{ delimit .value ", " }}
+          {{ else if or (hasPrefix $value "http://") (hasPrefix $value "https://") }}
+            <a href="{{ $value }}" target="_blank" rel="noopener noreferrer">{{ $value }}</a>
+          {{ else if reflect.IsMap .value }}
+            {{ .value }}
+          {{ else }}
+            {{ .value }}
+          {{ end }}
+        </dd>
+      {{ end }}
+    </dl>
+  </aside>
+{{ end }}

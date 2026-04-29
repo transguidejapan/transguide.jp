@@ -1,0 +1,19 @@
+{{ $items := slice }}
+{{ with .Params.category }}{{ $items = $items | append (dict "term" "Category" "value" .) }}{{ end }}
+{{ with .Params.area }}{{ $items = $items | append (dict "term" "Area" "value" .) }}{{ end }}
+{{ with .Params.location }}{{ $items = $items | append (dict "term" "Location" "value" .) }}{{ end }}
+{{ with .Params.tags }}{{ $items = $items | append (dict "term" "Tags" "value" .) }}{{ end }}
+{{ with $items }}
+  <dl>
+    {{ range . }}
+      <dt>{{ .term }}</dt>
+      <dd>
+        {{ if reflect.IsSlice .value }}
+          {{ delimit .value ", " }}
+        {{ else }}
+          {{ .value }}
+        {{ end }}
+      </dd>
+    {{ end }}
+  </dl>
+{{ end }}

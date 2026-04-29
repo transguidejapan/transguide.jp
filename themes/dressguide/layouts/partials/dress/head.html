@@ -1,0 +1,18 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ if eq hugo.Environment "staging" }}
+    <meta name="robots" content="noindex, nofollow">
+  {{ else if hugo.IsProduction }}
+    <meta name="robots" content="index, follow">
+  {{ end }}
+  <title>{{ partial "dress/title.html" . }}</title>
+  {{ with partial "dress/description.html" . }}
+    <meta name="description" content="{{ . }}">
+  {{ end }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+  <link rel="stylesheet" href="{{ "css/dress.css" | relURL }}">
+</head>
