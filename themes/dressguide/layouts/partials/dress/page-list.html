@@ -1,7 +1,10 @@
-{{ with .Pages.ByTitle }}
+{{ $pages := .Pages.ByTitle }}
+{{ with $pages }}
+  {{ $pageSize := site.Params.pagination.pageSize | default 6 }}
+  {{ $paginator := $.Paginate $pages $pageSize }}
   <section aria-label="Pages">
     <ul>
-      {{ range . }}
+      {{ range $paginator.Pages }}
         <li>
           <article>
             <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -12,4 +15,5 @@
       {{ end }}
     </ul>
   </section>
+  {{ partial "dress/pagination.html" $ }}
 {{ end }}
