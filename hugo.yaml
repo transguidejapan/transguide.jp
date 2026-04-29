@@ -1,7 +1,7 @@
 baseURL: https://transguide.jp/
 languageCode: en-us
 title: transguide.jp
-theme: dressguide
+theme: dress
 
 menu:
   main:

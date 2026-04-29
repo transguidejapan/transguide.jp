@@ -14,7 +14,7 @@
   <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
   <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
   <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
-  {{ $styles := resources.Get "css/dressguide.css" | postCSS (dict "use" "postcss-import") | minify | fingerprint }}
+  {{ $styles := resources.Get "css/dress.css" | postCSS (dict "use" "postcss-import") | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
   {{ with resources.Get "scss/index.scss" }}
     {{ $custom := . | toCSS | minify | fingerprint }}

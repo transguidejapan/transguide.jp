@@ -1,0 +1,12 @@
+<footer>
+  <nav aria-label="Footer">
+    <ul>
+      {{ range site.Menus.main }}
+        {{ if eq .Identifier "contact" }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      {{ end }}
+      <li><a href="#">Back to top</a></li>
+    </ul>
+  </nav>
+</footer>

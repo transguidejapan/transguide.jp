@@ -1,0 +1,7 @@
+name = "dress"
+license = "MIT"
+description = "Semantic, classless Hugo theme using dress.css."
+min_version = "0.120.0"
+
+[author]
+  name = "Rémino Rem"
