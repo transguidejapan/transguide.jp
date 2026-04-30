@@ -1,0 +1,8 @@
+node_modules
+public
+resources
+themes/hextra
+content
+submodules
+assets/fontawesome
+.hugo_build.lock
