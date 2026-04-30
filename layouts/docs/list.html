@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <article>
+    {{ partial "dress/language-links.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{ $pages := .Pages.ByTitle }}
+    {{ with $pages }}
+      {{ $pageSize := site.Params.pagination.pageSize | default 6 }}
+      {{ $paginator := $.Paginate $pages $pageSize }}
+      <section aria-label="Resources">
+        <ul>
+          {{ range $paginator.Pages }}
+            <li>
+              <article>
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                {{ with .Description }}<p>{{ . }}</p>{{ end }}
+                {{ partial "transguide/resource-meta.html" . }}
+              </article>
+            </li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ partial "transguide/pagination.html" $ }}
+    {{ end }}
+  </article>
+{{ end }}

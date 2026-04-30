@@ -1,5 +1,0 @@
-{{- with .Description -}}
-  {{- . -}}
-{{- else -}}
-  {{- with .Summary -}}{{ . | plainify | htmlUnescape | truncate 160 }}{{- end -}}
-{{- end -}}

@@ -17,18 +17,36 @@ menu:
       name: Blog
       pageRef: /blog
       weight: 3
-    - name: Search
-      weight: 4
-      params:
-        type: search
     - identifier: contact
       name: Contact
       url: mailto:transguidejapan@gmail.com 
-      weight: 5
+      weight: 4
       params:
         icon: mail
+  footer:
+    - identifier: contact
+      name: Contact
+      url: mailto:transguidejapan@gmail.com
+      weight: 1
+    - identifier: back-to-top
+      name: Back to top
+      url: "#"
+      weight: 2
 
 params:
+  dress:
+    logo:
+      src: images/logo.svg
+      width: 100
+      height: 100
+      alt: ""
+    favicons:
+      - href: favicon.ico
+        sizes: any
+      - href: favicon.svg
+        type: image/svg+xml
+      - rel: apple-touch-icon
+        href: apple-touch-icon.png
   menu:
     resources:
       - Hair

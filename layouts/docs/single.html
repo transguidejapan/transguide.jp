@@ -3,7 +3,7 @@
     {{ partial "dress/language-links.html" . }}
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p>{{ . }}</p>{{ end }}
-    {{ partial "dress/page-params.html" . }}
+    {{ partial "transguide/page-params.html" . }}
     {{ .Content }}
   </article>
 {{ end }}
