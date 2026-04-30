@@ -11,11 +11,14 @@
     {{- if .IsHome -}}
       {{ .Site.Title -}}
     {{ else -}}
-      {{ with .Title }}{{ . }} – {{ end -}}
+      {{ with .Title }}{{ . }} –{{ end -}}
       {{ .Site.Title -}}
     {{ end -}}
   </title>
-  <meta name="description" content="{{ partial "utils/page-description.html" . }}" />
+  <meta
+    name="description"
+    content="{{ partial "utils/page-description.html" . }}"
+  />
 
   {{- with .Params.canonical -}}
     <link rel="canonical" href="{{ . }}" itemprop="url" />
@@ -30,11 +33,15 @@
   {{- partialCached "head-css.html" . -}}
 
 
-<!-- Google Analytics -->
-{{- if and (eq hugo.Environment "production") .Site.Config.Services.GoogleAnalytics.ID }}
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
-  {{ partial "google-analytics.html" . }}
-{{- end }}
+  <!-- Google Analytics -->
+  {{- if and (eq hugo.Environment "production") .Site.Config.Services.GoogleAnalytics.ID }}
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+    {{ partial "google-analytics.html" . }}
+  {{- end }}
 
   <script>
     /* Initialize light/dark mode */
@@ -57,11 +64,8 @@
         window.matchMedia("(prefers-color-scheme: dark)").matches ? setDarkTheme() : setLightTheme();
       }
     }
-  </script>
+  </script> {{ partial "custom/head-end.html" . }}
 
-  {{ partial "custom/head-end.html" . }}
-
-  
   {{- $index := resources.Get "/js/common.js" }}
-  <script src="{{$index.RelPermalink}}" type="module"> </script>
+  <script src="{{ $index.RelPermalink }}" type="module"></script>
 </head>

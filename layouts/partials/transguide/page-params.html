@@ -16,7 +16,9 @@
           {{ if reflect.IsSlice .value }}
             {{ delimit .value ", " }}
           {{ else if or (hasPrefix $value "http://") (hasPrefix $value "https://") }}
-            <a href="{{ $value }}" target="_blank" rel="noopener noreferrer">{{ $value }}</a>
+            <a href="{{ $value }}" target="_blank" rel="noopener noreferrer"
+              >{{ $value }}</a
+            >
           {{ else if reflect.IsMap .value }}
             {{ .value }}
           {{ else }}

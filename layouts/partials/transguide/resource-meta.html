@@ -1,8 +1,16 @@
 {{ $items := slice }}
-{{ with .Params.category }}{{ $items = $items | append (dict "term" "Category" "value" .) }}{{ end }}
-{{ with .Params.area }}{{ $items = $items | append (dict "term" "Area" "value" .) }}{{ end }}
-{{ with .Params.location }}{{ $items = $items | append (dict "term" "Location" "value" .) }}{{ end }}
-{{ with .Params.tags }}{{ $items = $items | append (dict "term" "Tags" "value" .) }}{{ end }}
+{{ with .Params.category }}
+  {{ $items = $items | append (dict "term" "Category" "value" .) }}
+{{ end }}
+{{ with .Params.area }}
+  {{ $items = $items | append (dict "term" "Area" "value" .) }}
+{{ end }}
+{{ with .Params.location }}
+  {{ $items = $items | append (dict "term" "Location" "value" .) }}
+{{ end }}
+{{ with .Params.tags }}
+  {{ $items = $items | append (dict "term" "Tags" "value" .) }}
+{{ end }}
 {{ with $items }}
   <dl>
     {{ range . }}

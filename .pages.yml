@@ -22,7 +22,7 @@ content:
         label: Category
         type: select
         options:
-          values: 
+          values:
             - name: beauty
               label: Beauty
             - name: medical
@@ -40,7 +40,7 @@ content:
         options:
           creatable: true
           multiple: true
-          values: 
+          values:
             - name: kanto
               label: Kantō
             - name: kansai
@@ -69,7 +69,18 @@ content:
         options:
           creatable: true
           multiple: true
-          values: [ Hair Removal, Electrolysis, Laser, IPL, HRT, Surgical, Counseling, Psychiatric, General ]
+          values:
+            [
+              Hair Removal,
+              Electrolysis,
+              Laser,
+              IPL,
+              HRT,
+              Surgical,
+              Counseling,
+              Psychiatric,
+              General,
+            ]
       - name: lang
         label: Languages Supported
         type: select

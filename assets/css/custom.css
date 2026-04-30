@@ -1,10 +1,10 @@
-@import 'tailwindcss/theme' source(none);
-@import 'tailwindcss/utilities' source(none);
+@import "tailwindcss/theme" source(none);
+@import "tailwindcss/utilities" source(none);
 
 article img {
-	@apply block h-auto max-w-full;
+  @apply block h-auto max-w-full;
 }
 
 footer nav ul {
-	@apply justify-end;
+  @apply justify-end;
 }

@@ -19,7 +19,7 @@ menu:
       weight: 3
     - identifier: contact
       name: Contact
-      url: mailto:transguidejapan@gmail.com 
+      url: mailto:transguidejapan@gmail.com
       weight: 4
       params:
         icon: mail
@@ -61,4 +61,3 @@ languages:
   ja:
     weight: 1
     languageName: 日本語
-    
