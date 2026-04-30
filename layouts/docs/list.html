@@ -8,17 +8,13 @@
       {{ $pageSize := site.Params.pagination.pageSize | default 6 }}
       {{ $paginator := $.Paginate $pages $pageSize }}
       <section aria-label="Resources">
-        <ul>
-          {{ range $paginator.Pages }}
-            <li>
-              <article>
-                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                {{ with .Description }}<p>{{ . }}</p>{{ end }}
-                {{ partial "transguide/resource-meta.html" . }}
-              </article>
-            </li>
-          {{ end }}
-        </ul>
+        {{ range $paginator.Pages }}
+          <article>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{ with .Description }}<p>{{ . }}</p>{{ end }}
+            {{ partial "transguide/resource-meta.html" . }}
+          </article>
+        {{ end }}
       </section>
       {{ partial "transguide/pagination.html" $ }}
     {{ end }}
