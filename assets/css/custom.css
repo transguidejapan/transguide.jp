@@ -1,15 +1,10 @@
-@import "tailwindcss/theme" source(none);
-@import "tailwindcss/utilities" source(none);
+@import 'tailwindcss/theme' source(none);
+@import 'tailwindcss/utilities' source(none);
 
 article img {
-  @apply block h-auto max-w-full;
+	@apply block h-auto max-w-full;
 }
 
-.navbar {
-  @apply mb-8 ml-16 mr-16 flex flex-row items-center justify-evenly;
-  margin-top: 2.7rem;
-}
-
-.navbar__logo {
-  @apply w-24;
+footer nav ul {
+	@apply justify-end;
 }
