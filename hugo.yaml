@@ -2,6 +2,14 @@ baseURL: https://transguide.jp/
 languageCode: en-us
 title: transguide.jp
 theme: dress
+contentDir: submodules/site-content
+ignoreFiles:
+  - '(^|/)README\.md$'
+  - "(^|/)templates(/|$)"
+  - "(^|/)scripts(/|$)"
+  - '(^|/)\.github(/|$)'
+  - '(^|/)\.pages\.yml$'
+  - '(^|/)\.gitignore$'
 
 menu:
   main:

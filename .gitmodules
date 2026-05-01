@@ -1,6 +1,6 @@
 [submodule "themes/hextra"]
 	path = themes/hextra
 	url = https://github.com/imfing/hextra.git
-[submodule "submodules/tgj-vault"]
-	path = submodules/tgj-vault
-	url = ../tgj-vault.git
+[submodule "submodules/site-content"]
+	path = submodules/site-content
+	url = https://github.com/transguidejapan/site-content.git
