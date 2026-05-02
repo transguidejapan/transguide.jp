@@ -6,6 +6,7 @@ module:
   imports:
     - path: github.com/imfing/hextra
 ignoreFiles:
+  - '(^|/)\.DS_Store$'
   - '(^|/)README\.md$'
   - "(^|/)templates(/|$)"
   - "(^|/)scripts(/|$)"
