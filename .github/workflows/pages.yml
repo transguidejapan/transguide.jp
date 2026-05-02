@@ -62,8 +62,8 @@ jobs:
 
       - name: Build
         env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
+          HUGO_ENVIRONMENT: staging
+          HUGO_ENV: staging
         run: hugo --cleanDestinationDir --gc --minify
 
       - name: Upload artifact
