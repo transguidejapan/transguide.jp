@@ -1,7 +1,30 @@
+/* Hextra primary accent */
+:root {
+  --primary-hue: 204deg;
+  --primary-saturation: 100%;
+  --primary-lightness: 58%;
+}
+
+.hextra-nav-container {
+  background: transparent
+    linear-gradient(
+      90deg,
+      #5bcffaff 0%,
+      #ffffff99 33.33%,
+      #ffffff99 66.66%,
+      #f5a9b8ff 100%
+    );
+}
+
 article img {
   display: block;
   height: auto;
   max-width: 100%;
+}
+
+::selection {
+  background: #f5a9b8;
+  color: #111111;
 }
 
 footer nav ul {
