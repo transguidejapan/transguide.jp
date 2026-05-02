@@ -2,8 +2,12 @@
   {{- $custom := . | postCSS (dict "inlineImports" true) -}}
   {{- if hugo.IsProduction -}}
     {{- $custom = $custom | minify | fingerprint -}}
-    <link rel="stylesheet" href="{{ $custom.RelPermalink }}" integrity="{{ $custom.Data.Integrity }}">
+    <link
+      rel="stylesheet"
+      href="{{ $custom.RelPermalink }}"
+      integrity="{{ $custom.Data.Integrity }}"
+    />
   {{- else -}}
-    <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}" />
   {{- end -}}
 {{- end -}}
