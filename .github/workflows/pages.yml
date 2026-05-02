@@ -34,7 +34,7 @@ jobs:
       - name: Checkout site-content
         uses: actions/checkout@v4
         with:
-          repository: transguidejapan/site-content
+          repository: transguidejapan/content
           ref: live
           path: content
 
