@@ -3,5 +3,6 @@ public
 resources
 content
 submodules
+themes/dress
 assets/fontawesome
 .hugo_build.lock
