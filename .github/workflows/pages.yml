@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: transguidejapan/site-content
-          ref: main
+          ref: live
           path: content
 
       - name: Setup Pages
