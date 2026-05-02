@@ -1,0 +1,9 @@
+{{- with resources.Get "css/custom.css" -}}
+  {{- $custom := . | postCSS (dict "inlineImports" true) -}}
+  {{- if hugo.IsProduction -}}
+    {{- $custom = $custom | minify | fingerprint -}}
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}" integrity="{{ $custom.Data.Integrity }}">
+  {{- else -}}
+    <link rel="stylesheet" href="{{ $custom.RelPermalink }}">
+  {{- end -}}
+{{- end -}}
