@@ -48,6 +48,9 @@ menu:
       weight: 2
 
 params:
+  footer:
+    displayPoweredBy: false
+    displayCopyright: true
   search:
     enable: true
     type: flexsearch
