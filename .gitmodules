@@ -1,6 +1,3 @@
 [submodule "submodules/site-content"]
 	path = submodules/site-content
 	url = https://github.com/transguidejapan/site-content.git
-[submodule "themes/dress"]
-	path = themes/dress
-	url = https://github.com/remino/hugo-dress.git
