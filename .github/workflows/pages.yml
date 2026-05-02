@@ -32,7 +32,9 @@ jobs:
           submodules: recursive
 
       - name: Use latest site content
-        run: git -C submodules/site-content pull --ff-only origin main
+        run: |
+          git -C submodules/site-content fetch origin main
+          git -C submodules/site-content checkout --detach origin/main
 
       - name: Setup Pages
         id: pages
