@@ -2,7 +2,7 @@
 
 We're building a transgender-friendly resources database for people living in Japan.
 
-This repository owns the Hugo site, theme, build, and GitHub Pages deployment. Editable site content lives in the [`transguidejapan/site-content`](https://github.com/transguidejapan/site-content) repository, mounted here as `submodules/site-content`.
+This repository owns the Hugo site, theme, build, and GitHub Pages deployment. Editable site content lives in the [`transguidejapan/site-content`](https://github.com/transguidejapan/site-content) repository, mounted locally in `content/` during the build.
 
 ## Local Setup
 
@@ -12,10 +12,10 @@ First, make sure you have the following dependencies installed:
 - npm
 - hugo
 
-Then clone the repo. You will also need to ensure that the content submodule is pulled and up-to-date.
+Then clone the repo. For local development, either clone `site-content` into `content/` or symlink `content/` to your checkout.
 
 ```
-git submodule update --init --recursive
+git clone https://github.com/transguidejapan/site-content.git content
 ```
 
 Next, install needed packages and build the site.

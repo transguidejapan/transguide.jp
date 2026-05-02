@@ -2,7 +2,7 @@ baseURL: https://next.transguide.jp/
 languageCode: en-us
 title: transguide.jp
 theme: dress
-contentDir: submodules/site-content
+contentDir: content
 ignoreFiles:
   - '(^|/)README\.md$'
   - "(^|/)templates(/|$)"
