@@ -6,4 +6,4 @@ resources/
 .obsidian/
 node_modules
 .frontmatter/
-content/
+content
